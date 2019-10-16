@@ -12,7 +12,14 @@
     <title>LoginPage</title>
   </head>
   <body>
-  
+  <form action="login" method="post">
+    用户名:<input type="text" name="user"><br>
+    密码:<input type="password" name="pwd"><br>
+    <input type="submit" value="登录"><br>
+  </form>
+  <form action="signup.jsp" method="post">
+     没有账号？<input type="submit" value="注册"><br>
+  </form>
 
   </body>
 </html>

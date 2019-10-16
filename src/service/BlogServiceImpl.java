@@ -19,6 +19,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public void addUserService(User u) {
+        bd.addUser(u);
 
     }
 

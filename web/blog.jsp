@@ -11,6 +11,6 @@
     <title>blogPage</title>
 </head>
 <body>
-
+这是一个博客界面
 </body>
 </html>
