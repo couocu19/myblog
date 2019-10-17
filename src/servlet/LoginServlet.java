@@ -1,5 +1,7 @@
 package servlet;
 
+import dao.BlogDao;
+import dao.BlogDaoImpl;
 import service.BlogService;
 import service.BlogServiceImpl;
 
@@ -10,8 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 @WebServlet(name = "login",urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+
+    BlogDaoImpl bd = new BlogDaoImpl();
 
     BlogService bs = new BlogServiceImpl();
     @Override
@@ -20,10 +25,16 @@ public class LoginServlet extends HttpServlet {
         resp.setContentType("text/html;utf-8");
         String user = req.getParameter("user");
         String pwd = req.getParameter("pwd");
+        req.setAttribute("user",user);
+        req.setAttribute("pwd",pwd);
         if(bs.userMappingService(user,pwd)){
-            req.getRequestDispatcher("blog.jsp").forward(req,resp);
+            String time = bd.getUserBirth(user);
+            req.setAttribute("birth",time);
+
+           // resp.sendRedirect("blog.jsp");
+          req.getRequestDispatcher("blog.jsp").forward(req,resp);
         }else{
-            resp.sendRedirect("login");
+            resp.sendRedirect("index.jsp");
 
         }
 

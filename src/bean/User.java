@@ -1,5 +1,7 @@
 package bean;
 
+import java.io.File;
+import java.io.InputStream;
 import java.util.Date;
 
 public class User {
@@ -7,12 +9,21 @@ public class User {
     private String name;
     private String pwd;
     private Date date;
+    private InputStream photo;
 
-    public User(int id, String name, String pwd, Date date) {
-        this.id = id;
+//    public User(int id, String name, String pwd, Date date) {
+//        this.id = id;
+//        this.name = name;
+//        this.pwd = pwd;
+//        this.date = date;
+//    }
+
+
+    public User(String name, String pwd, Date date, InputStream photo) {
         this.name = name;
         this.pwd = pwd;
         this.date = date;
+        this.photo = photo;
     }
 
     public User(String name, String pwd, Date date) {
@@ -23,6 +34,14 @@ public class User {
 
     public User(){
 
+    }
+
+    public InputStream getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(InputStream photo) {
+        this.photo = photo;
     }
 
     public int getId() {

@@ -7,19 +7,33 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/boot.min.css"/>
 <html>
   <head>
     <title>LoginPage</title>
   </head>
   <body>
+  <div class="lr">
+
   <form action="login" method="post">
-    用户名:<input type="text" name="user"><br>
-    密码:<input type="password" name="pwd"><br>
+    <div class="form-group">
+    用户名/昵称<br>
+      <input type="text" name="user"><br>
+    </div>
+
+    <div class="form-group">
+    密码<br>
+      <input type="password" name="pwd"><br>
+    </div>
+
+    <div class="form-group">
     <input type="submit" value="登录"><br>
+    </div>
   </form>
   <form action="signup.jsp" method="post">
      没有账号？<input type="submit" value="注册"><br>
   </form>
+  </div>
 
   </body>
 </html>
