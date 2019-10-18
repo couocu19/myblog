@@ -21,7 +21,6 @@ import java.util.Date;
 public class RegisterServlet extends HttpServlet {
 
     BlogService bs = new BlogServiceImpl();
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
@@ -31,19 +30,19 @@ public class RegisterServlet extends HttpServlet {
         String pwd = req.getParameter("pwd");
         SimpleDateFormat fomater = new SimpleDateFormat( "yyyy-MM-dd");
         String date = req.getParameter("date");
-//        String photo = req.getParameter("photo");
-//        InputStream in = null;
-//        in = new FileInputStream(photo);
 
         try {
             time =  fomater.parse(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         User u = new User(user,pwd,time);
         bs.addUserService(u);
-        resp.sendRedirect("index.jsp");
+
+//        UploadFileServlet up = new UploadFileServlet();
+//        up.service(req,resp);
+
+        resp.sendRedirect("uploadphoto.jsp");
 
     }
 

@@ -60,8 +60,8 @@
                     <a class="text" href="#" class="title">Java基础知识之反射</a>
                     <a class="text1" href="#" class="title">阅读全文</a>
                     <div class="info">
-                        <span>作者:刘二狗</span>.
-                        <span>评论数:</span>.
+                        <span>作者:coucou</span>.
+                        <span>评论数:</span>
                     </div>
                 <%--</div>--%>
             </div>
