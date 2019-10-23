@@ -18,12 +18,15 @@ public class BlogServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;utf-8");
-        String name  = req.getParameter("user");
+        String name  = (String)req.getServletContext().getAttribute("user");
+        System.out.println(name);
         String birth = bd.getUserBirth(name);
-        req.setAttribute("name",name);
-        req.setAttribute("birth",birth);
-        req.getRequestDispatcher("/blog.jsp");
-
+        String path = bd.getImagePath(name);
+        req.getServletContext().setAttribute("name",name);
+        req.getServletContext().setAttribute("birth",birth);
+        req.getServletContext().setAttribute("path",path);
+        resp.sendRedirect("blog.jsp");
+        //req.getRequestDispatcher("blog.jsp");
     }
 
     @Override

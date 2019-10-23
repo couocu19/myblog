@@ -8,6 +8,23 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="commons-fileupload-1.3.1" />
+          <element id="file-copy" path="D:/lib/commons-logging-1.2.jar" />
+          <element id="file-copy" path="D:/lib/spring-beans-3.2.0.RELEASE.jar" />
+          <element id="library" level="project" name="lib" />
+          <element id="file-copy" path="D:/lib/spring-web-4.2.0.RELEASE.jar" />
+          <element id="file-copy" path="D:/lib/spring-data-commons-1.9.4.RELEASE.jar" />
+          <element id="file-copy" path="D:/lib/swagger-spring-mvc-ui-0.4.jar" />
+          <element id="file-copy" path="D:/lib/spring-context-5.0.7.RELEASE.jar" />
+          <element id="file-copy" path="D:/lib/spring-webmvc-4.3.20.RELEASE.jar" />
+          <element id="file-copy" path="D:/lib/lib_jb51/commons-collections-3.0.jar" />
+          <element id="file-copy" path="D:/lib/lib_jb51/commons-beanutils.jar" />
+          <element id="file-copy" path="D:/lib/lib_jb51/commons-lang-2.1.jar" />
+          <element id="file-copy" path="D:/lib/lib_jb51/ezmorph-1.0.2.jar" />
+          <element id="file-copy" path="D:/lib/lib_jb51/json-lib-1.1-jdk13.jar" />
+          <element id="file-copy" path="D:/lib/lib_jb51/xom-1.0d10.jar" />
+          <element id="file-copy" path="D:/lib/json-lib-2.4-jdk15.jar" />
+          <element id="file-copy" path="D:/lib/spring-core-5.0.6.RELEASE.jar" />
+          <element id="file-copy" path="D:/lib/jspSmartUpload.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="myblog/web/Web" />

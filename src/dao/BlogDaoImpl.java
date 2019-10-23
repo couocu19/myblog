@@ -56,56 +56,44 @@ public class BlogDaoImpl implements BlogDao {
         }
     }
     //上传用户头像
-    public void uploadImage(FileItem f,String name){
+    public void uploadImage(String path,String name){
         Connection con = JDBCUtil.getConnection();
-        InputStream in = null;
-        String sql = "insert into userImage (name,image) values (?,?)";
+//        InputStream in = null;
+        String sql = "insert into imagepath (name,path) values (?,?)";
         PreparedStatement ps = null;
         try {
-            in = f.getInputStream();
             ps = con.prepareStatement(sql);
             ps.setString(1,name);
-            ps.setBinaryStream(2,in,in.available());
+            ps.setString(2,path);
             ps.executeUpdate();
-            in.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e){
             e.printStackTrace();
         }
 
 
     }
     //从数据库获取用户头像....好像不需要这个函数
-    public void getImage(String name){
+    public String getImagePath(String name){
         Connection con = JDBCUtil.getConnection();
-        String sql = "select * from userImage where name = ?";
+        String sql = "select * from imagepath where name = ?";
         PreparedStatement ps = null;
         ResultSet rs = null;
         InputStream in = null;
+        String path = null;
 
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1,name);
             rs = ps.executeQuery();
             while(rs.next()){
-                in = rs.getBinaryStream("image");
-                byte[] b=new byte[in.available()];    //新建保存图片数据的byte数组
-                in.read(b);
-                OutputStream out=new FileOutputStream("222.jpg");
-                out.write(b);
-                out.flush();
-                out.close();
+                path = rs.getString("path");
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
-
         }
 
+        return path;
 
     }
 

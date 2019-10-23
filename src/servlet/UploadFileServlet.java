@@ -1,41 +1,32 @@
 package servlet;
 
-import dao.BlogDao;
+import com.jspsmart.upload.SmartUpload;
 import dao.BlogDaoImpl;
 import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.commons.io.FilenameUtils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.*;
-
+import java.net.URLDecoder;
 import java.util.UUID;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import javax.servlet.http.Part;
-import java.sql.DriverManager;
-import java.util.Iterator;
+
 import java.util.List;
 
 
 @WebServlet(name="upload",urlPatterns = "/upload")
 public class UploadFileServlet extends HttpServlet {
     BlogDaoImpl bd = new BlogDaoImpl();
+    SmartUpload su = new SmartUpload();
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DiskFileItemFactory factory=new DiskFileItemFactory();
         ServletFileUpload upload=new ServletFileUpload(factory);
         request.setCharacterEncoding("utf-8");
-        //从上一个页面中获取user的值
-        String user = request.getParameter("user");
+        response.setContentType("text/html;utf-8");
+        String user = null;
+        String path = null;
         //设置缓冲区大小与临时文件目录
         factory.setSizeThreshold(1024*1024*10);
         File uploadTemp=new File("e:\\uploadTemp");
@@ -61,18 +52,27 @@ public class UploadFileServlet extends HttpServlet {
                     file.mkdirs();
                     //写入文件到磁盘，该行执行完毕后，若有该临时文件，将会自动删除
                     fileItem.write(new File(uploadPath,uuid+suffix));
-                    //dao层上传数据到数据库
-                    bd.uploadImage(fileItem,user);
-                    request.setAttribute("uploadPath",uploadPath);
-                    request.setAttribute("filename",uuid+suffix);
+                    path = "http://localhost:8080"+request.getContextPath()+"/web/userimage/"+uuid+suffix;
+                    System.out.println(path);
+                    request.getServletContext().setAttribute("path",path);
+                }
+
+                else{
+                    System.out.println(fileItem.getFieldName()); //该name值空间中的value值
+                    System.out.println(fileItem.getString("UTF-8"));
+                    user = fileItem.getString("UTF-8");
+                    user = URLDecoder.decode(user,"UTF-8");
+                    System.out.println(user);
+                    request.getServletContext().setAttribute("name",user);
+                    System.out.println(path);
                 }
             }
+
         }  catch (Exception e) {
             e.printStackTrace();
         }
-
-        request.getRequestDispatcher("blog.jsp").forward(request,response);
-
+        bd.uploadImage(path,user);
+        response.sendRedirect("blog.jsp");
 
     }
 }

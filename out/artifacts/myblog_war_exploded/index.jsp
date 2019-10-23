@@ -30,6 +30,7 @@
     <input type="submit" value="登录"><br>
     </div>
   </form>
+
   <form action="signup.jsp" method="post">
      没有账号？<input type="submit" value="注册"><br>
   </form>

@@ -36,7 +36,8 @@
 <script src="editor.md-master/examples/js/jquery.min.js"></script>
 
 <div id="layout">
-    <header>
+    <form action="" method="post">
+     <header>
         <h1>请开始你的编辑</h1>
             文章标题：<input type="text" id="articleTitle" />
             类别：
@@ -44,7 +45,7 @@
             <span id="btnList">
                 <button type="button" id="publishArticle" onclick="writeArticle.doSubmit();" class="btn btn-info">发布文章</button>
             </span>
-    </header>
+     </header>
     <div id="test-editormd">
                 <textarea style="display:none;">[TOC]
 
@@ -80,6 +81,7 @@
 ```
 </textarea>
     </div>
+    </form>
 </div>
 
 <script type="text/javascript">

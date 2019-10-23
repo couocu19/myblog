@@ -5,7 +5,8 @@
   Time: 17:10
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/boot.min.css"/>
@@ -17,9 +18,12 @@
 <div class="contains">
 </div>
 <div class="container">
+    <%
+        String name = (String)request.getServletContext().getAttribute("name");
+    %>
     <div class="col-sm-3">
            <div id="userBox">
-               ${user}的博客
+               <%=name%>的博客
            </div>
            <div class="list-group">
                <a class="list-group-item" href="#">☋ 首页</a>
@@ -30,8 +34,8 @@
            <%--<div id="userInfo">--%>
                <div class="user">
                    <div id="photo">
-                       <img src="userimage/defaultimg.JPG"><br>
-                       ${user}
+                       <img src=${path}><br>
+                       <%=name%>
                    </div>
                </div>
 

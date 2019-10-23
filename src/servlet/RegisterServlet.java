@@ -24,18 +24,18 @@ public class RegisterServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;utf-8");
         Date time = null;
-        String user = req.getParameter("user");
+        String user = req.getParameter("name");
+//        System.out.println(user);
         String pwd = req.getParameter("pwd");
         SimpleDateFormat fomater = new SimpleDateFormat( "yyyy-MM-dd");
         String date = req.getParameter("date");
-
         try {
             time =  fomater.parse(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        req.setAttribute("user",user);
+        req.setAttribute("name",user);
         User u = new User(user,pwd,time);
         bs.addUserService(u);
 
