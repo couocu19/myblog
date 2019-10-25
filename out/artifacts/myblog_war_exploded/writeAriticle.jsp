@@ -30,24 +30,28 @@
     <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
 
 </head>
-<body>
+<body background="img/writeBackground.jpg">
 <h1>写博客</h1>
 
 <script src="editor.md-master/examples/js/jquery.min.js"></script>
 
-<div id="layout">
-    <form action="" method="post">
+<div id="layout" style="margin-left: 20px">
+    <%
+        String name = (String)request.getServletContext().getAttribute("name");
+    %>
+    <form action="article/submit" method="post">
      <header>
         <h1>请开始你的编辑</h1>
-            文章标题：<input type="text" id="articleTitle" />
+            文章标题：<input type="text" id="articleTitle" name="title" />
+         <input type="hidden" name="user" value="<%=name%>">
             类别：
             <select id="articleCategory"></select>
             <span id="btnList">
-                <button type="button" id="publishArticle" onclick="writeArticle.doSubmit();" class="btn btn-info">发布文章</button>
+                <input type="submit" id="publishArticle" onclick="writeArticle.doSubmit();" class="btn btn-info" value="发布文章" />
             </span>
      </header>
     <div id="test-editormd">
-                <textarea style="display:none;">[TOC]
+        <textarea class="editormd-markdown-textarea" name="markdown" style="display:none;">[TOC]
 
 #### Disabled options
 
@@ -79,7 +83,10 @@
 &lt;!-- 繁體中文 --&gt;
 &lt;script src="../dist/js/languages/zh-tw.js"&gt;&lt;/script&gt;
 ```
-</textarea>
+ </textarea>
+        <textarea class="editormd-html-textarea" name="essay">
+
+        </textarea>
     </div>
     </form>
 </div>

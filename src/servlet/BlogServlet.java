@@ -26,7 +26,6 @@ public class BlogServlet extends HttpServlet {
         req.getServletContext().setAttribute("birth",birth);
         req.getServletContext().setAttribute("path",path);
         resp.sendRedirect("blog.jsp");
-        //req.getRequestDispatcher("blog.jsp");
     }
 
     @Override

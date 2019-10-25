@@ -1,6 +1,8 @@
 package servlet;
 
+import bean.Article;
 import bean.User;
+import dao.BlogDaoImpl;
 import service.BlogService;
 import service.BlogServiceImpl;
 
@@ -13,12 +15,14 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 
 @WebServlet(name = "register",urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
 
     BlogService bs = new BlogServiceImpl();
+    BlogDaoImpl bd = new BlogDaoImpl();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
@@ -39,7 +43,9 @@ public class RegisterServlet extends HttpServlet {
         User u = new User(user,pwd,time);
         bs.addUserService(u);
 
-//        resp.sendRedirect("uploadphoto.jsp");
+        List<Article> list = bd.listArticles();
+        req.getServletContext().setAttribute("list",list);
+
         req.getRequestDispatcher("/uploadphoto.jsp").forward(req,resp);
 
     }

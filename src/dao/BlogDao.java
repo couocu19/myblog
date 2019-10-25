@@ -16,7 +16,7 @@ public interface BlogDao {
     void addArticle(Article a);
 
     void deleteArticle(int id);
-    void updateArticle(int id);
+    void updateArticle(int id,String title,String writing,String hwriting);
 
     //查找博文
     List<Article> searchArticle(String info);

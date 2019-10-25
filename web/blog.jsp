@@ -59,24 +59,27 @@
 </div>
     <div class="col-sm-6">
         <div class="news-list">
-            <div class="news-list-item clearfix">
-                <%--<div class="col-xs-">--%>
-                    <a class="text" href="#" class="title">Java基础知识之反射</a>
+            <%--<div class="news-list-item clearfix">--%>
+               <c:forEach items="${list}" var="l">
+                   <div class="news-list-item clearfix">
+                    <a class="text" href="#" class="title">${l.title}</a>
+                       <h4>${l.hwriting}</h4>
                     <a class="text1" href="#" class="title">阅读全文</a>
                     <div class="info">
-                        <span>作者:coucou</span>.
-                        <span>评论数:</span>
+                        <span>作者:${l.user}</span>.
+                        <span>评论数:${l.commentCount}</span>
                     </div>
-                <%--</div>--%>
-            </div>
+                   </div>
+               </c:forEach>
+
+            <%--</div>--%>
 
         </div>
-
 
     </div>
     <div class="col-sm-2">
                <ul class="nav navbar-nav navbar-right">
-                   <li><a href="">写文章</a></li>
+                   <li><a href="writeAriticle.jsp">写文章</a></li>
                    <li><a href="index.jsp">退出</a></li>
                </ul>
 

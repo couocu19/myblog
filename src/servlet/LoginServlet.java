@@ -1,5 +1,6 @@
 package servlet;
 
+import bean.Article;
 import dao.BlogDao;
 import dao.BlogDaoImpl;
 import service.BlogService;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet(name = "login",urlPatterns = "/login")
@@ -26,9 +28,11 @@ public class LoginServlet extends HttpServlet {
         req.getServletContext().setAttribute("user",user);
         req.getServletContext().setAttribute("pwd",pwd);
         if(bs.userMappingService(user,pwd)){
-            String time = bd.getUserBirth(user);
-            req.setAttribute("birth",time);
-            //resp.sendRedirect("blog");
+            //String time = bd.getUserBirth(user);
+            //req.setAttribute("birth",time);
+            List<Article> list = bd.listArticles();
+            req.getServletContext().setAttribute("list",list);
+           // req.getRequestDispatcher("/article/showArticles").forward(req,resp);
           req.getRequestDispatcher("/blog").forward(req,resp);
         }else{
             resp.sendRedirect("index.jsp");

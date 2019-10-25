@@ -7,36 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29920575-3679-4322-aaca-deb82bde9e51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/Blog1Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/UploadArticleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/myblog_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/myblog_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ArticleServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/writeBackground.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/bean/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/bean/Article.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/dao/BlogDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/dao/BlogDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/BlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/BlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/RegisterServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/UploadFileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/UploadFileServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/WEB-INF/classes/servlet/UploadArticleServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/upload/uploadphoto.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/uploadphoto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/uploadphoto.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/writeAriticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/myblog_war_exploded/writeAriticle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/myblog/dao/BlogDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/myblog/dao/BlogDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/myblog/bean/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/myblog/bean/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/myblog/dao/BlogDaoImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/myblog/servlet/BlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/myblog/servlet/BlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/myblog/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/myblog/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/myblog/servlet/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/myblog/servlet/RegisterServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/myblog/servlet/UploadFileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/myblog/servlet/UploadFileServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/myblog/servlet/UploadArticleServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BlogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BlogDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/BlogDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BlogDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/BlogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BlogServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UploadFileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/UploadFileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/UploadArticleServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/uploadphoto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/uploadphoto.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/writeAriticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/writeAriticle.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,52 +46,80 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/writeAriticle.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/ArticleServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#showMainArticles#0;class#ArticleServlet#0" />
+                <element signature="method#submit#0;class#ArticleServlet#0" />
+                <element signature="method#delete#0;class#ArticleServlet#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/BlogDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="229" column="49" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#userMapping#0;class#BlogDaoImpl#0" />
+                <element signature="method#addUser#0;class#BlogDaoImpl#0" />
+                <element signature="method#uploadImage#0;class#BlogDaoImpl#0" />
+                <element signature="method#getImagePath#0;class#BlogDaoImpl#0" />
+                <element signature="method#getUserBirth#0;class#BlogDaoImpl#0" />
+                <element signature="method#deleteArticle#0;class#BlogDaoImpl#0" />
+                <element signature="method#updateArticle#0;class#BlogDaoImpl#0" />
+                <element signature="method#listArticles#0;class#BlogDaoImpl#0" />
+                <element signature="method#getArticle#0;class#BlogDaoImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/BlogDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bean/Article.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="40" />
+              <folding>
+                <element signature="e#1731#1732#0" expanded="true" />
+                <element signature="e#1762#1763#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/RegisterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+            <state relative-caret-position="-102">
+              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/uploadphoto.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/signup.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/UploadFileServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-199">
-              <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -108,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="32">
+              <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -117,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/BlogServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+            <state relative-caret-position="227">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,26 +148,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/blog.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="320">
+              <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/BlogDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-49">
-              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#userMapping#0;class#BlogDaoImpl#0" />
-                <element signature="method#uploadImage#0;class#BlogDaoImpl#0" />
-                <element signature="method#getUserBirth#0;class#BlogDaoImpl#0" />
-                <element signature="method#addArticle#0;class#BlogDaoImpl#0" />
-                <element signature="method#deleteArticle#0;class#BlogDaoImpl#0" />
-                <element signature="method#updateArticle#0;class#BlogDaoImpl#0" />
-              </folding>
+            <state relative-caret-position="156">
+              <caret line="171" column="21" lean-forward="true" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -181,7 +195,6 @@
         <option value="$PROJECT_DIR$/web/searchArticle.jsp" />
         <option value="$PROJECT_DIR$/src/bean/Comment.java" />
         <option value="$PROJECT_DIR$/src/util/JDBCUtil.java" />
-        <option value="$PROJECT_DIR$/src/dao/BlogDao.java" />
         <option value="$PROJECT_DIR$/src/service/BlogService.java" />
         <option value="$PROJECT_DIR$/src/service/BlogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/bean/User.java" />
@@ -197,18 +210,20 @@
         <option value="$PROJECT_DIR$/src/dao/ArticleAdminController.java" />
         <option value="$PROJECT_DIR$/src/service/ArticleRepository.java" />
         <option value="$PROJECT_DIR$/src/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/bean/Article.java" />
-        <option value="$PROJECT_DIR$/web/writeAriticle.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/UploadArticleServlet.java" />
         <option value="$PROJECT_DIR$/src/servlet/Blog1Servlet.java" />
         <option value="$PROJECT_DIR$/web/signup.jsp" />
-        <option value="$PROJECT_DIR$/src/servlet/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/web/uploadphoto.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/servlet/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlet/BlogServlet.java" />
-        <option value="$PROJECT_DIR$/src/dao/BlogDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/servlet/UploadFileServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/BlogServlet.java" />
+        <option value="$PROJECT_DIR$/src/bean/Article.java" />
+        <option value="$PROJECT_DIR$/src/dao/BlogDao.java" />
+        <option value="$PROJECT_DIR$/web/writeAriticle.jsp" />
+        <option value="$PROJECT_DIR$/src/dao/BlogDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/servlet/ArticleServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/web/blog.jsp" />
       </list>
     </option>
@@ -250,6 +265,12 @@
               <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
               <item name="myblog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,7 +301,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571652179806" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571940518986" />
     <property name="last_opened_file_path" value="D:/lib/jspSmartUpload.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -290,22 +311,22 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="servlet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\11310\myblog\web\img" />
+      <recent name="C:\Users\11310\myblog\lib" />
+      <recent name="C:\Users\11310\myblog\web" />
+      <recent name="C:\Users\11310\myblog\web\WEB-INF\lib" />
+      <recent name="C:\Users\11310\myblog\web\userimage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\11310\myblog\out\artifacts\myblog_war_exploded\upload" />
       <recent name="C:\Users\11310\myblog\out\artifacts\myblog_war_exploded" />
       <recent name="C:\Users\11310\myblog\out\artifacts\myblog_war_exploded\web" />
       <recent name="C:\Users\11310\myblog\web\img" />
       <recent name="C:\Users\11310\myblog\web\WEB-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\11310\myblog\lib" />
-      <recent name="C:\Users\11310\myblog\web\img" />
-      <recent name="C:\Users\11310\myblog\web" />
-      <recent name="C:\Users\11310\myblog\web\WEB-INF\lib" />
-      <recent name="C:\Users\11310\myblog\web\userimage" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="servlet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -452,12 +473,15 @@
       <workItem from="1571738437990" duration="49000" />
       <workItem from="1571739729491" duration="51000" />
       <workItem from="1571853243425" duration="5409000" />
-      <workItem from="1571858681765" duration="954000" />
+      <workItem from="1571858681765" duration="3099000" />
+      <workItem from="1571887236909" duration="9837000" />
+      <workItem from="1571930150853" duration="607000" />
+      <workItem from="1571931092823" duration="8506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115835000" />
+    <option name="totallyTimeSpent" value="136930000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -473,7 +497,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8277087" visible="true" weight="0.2061439" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8277087" visible="true" weight="0.2061439" />
       <window_info id="Structure" order="1" show_stripe_button="false" sideWeight="0.1722913" side_tool="true" weight="0.16653194" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -483,7 +507,7 @@
       <window_info id="Web" order="7" sideWeight="0.17363344" side_tool="true" weight="0.16653194" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" x="6" y="330" width="1237" height="115" id="Run" order="2" visible="true" weight="0.1687389" />
+      <window_info anchor="bottom" x="6" y="330" width="1237" height="115" id="Run" order="2" visible="true" weight="0.23268206" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -495,7 +519,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" x="9" y="355" width="1237" height="362" id="Version Control" order="13" type="FLOATING" weight="0.44227353" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.042628776" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.092362344" />
       <window_info anchor="bottom" id="Spring" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
@@ -557,39 +581,8 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/artifacts/myblog_war_exploded/userimage/c3b31a9c-d20d-4f97-aad3-d0be1795ff8d.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/myblog_war_exploded/userimage/05441c62-9e8e-487a-8943-6a425744cdd1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/BlogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/myblog_war_exploded/uploadphoto.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/myblog_war_exploded/web/userimage/6aa53690-3e29-4bc6-b1a4-6eebc8a9c8b4.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/myblog_war_exploded/web/userimage/4ec2a23b-2b88-4c25-8456-4fc25463c3c5.JPG">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/UploadArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/myblog/servlet/BlogServlet.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -708,16 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/writeAriticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="40" selection-start-line="40" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/Blog1Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -728,13 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/RegisterServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/signup.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="149">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -745,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/signup.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
@@ -759,33 +732,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/BlogDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#userMapping#0;class#BlogDaoImpl#0" />
-            <element signature="method#uploadImage#0;class#BlogDaoImpl#0" />
-            <element signature="method#getUserBirth#0;class#BlogDaoImpl#0" />
-            <element signature="method#addArticle#0;class#BlogDaoImpl#0" />
-            <element signature="method#deleteArticle#0;class#BlogDaoImpl#0" />
-            <element signature="method#updateArticle#0;class#BlogDaoImpl#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/servlet/UploadArticleServlet.java" />
+    <entry file="file://$PROJECT_DIR$/web/img/writeBack.jpg" />
+    <entry file="file://$PROJECT_DIR$/web/css/writeArticle.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/BlogServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        <state relative-caret-position="227">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -794,18 +749,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/UploadFileServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-199">
-          <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+        <state relative-caret-position="227">
+          <caret line="73" column="34" lean-forward="true" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/writeAriticle.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/BlogDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/BlogDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="229" column="49" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#userMapping#0;class#BlogDaoImpl#0" />
+            <element signature="method#addUser#0;class#BlogDaoImpl#0" />
+            <element signature="method#uploadImage#0;class#BlogDaoImpl#0" />
+            <element signature="method#getImagePath#0;class#BlogDaoImpl#0" />
+            <element signature="method#getUserBirth#0;class#BlogDaoImpl#0" />
+            <element signature="method#deleteArticle#0;class#BlogDaoImpl#0" />
+            <element signature="method#updateArticle#0;class#BlogDaoImpl#0" />
+            <element signature="method#listArticles#0;class#BlogDaoImpl#0" />
+            <element signature="method#getArticle#0;class#BlogDaoImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#showMainArticles#0;class#ArticleServlet#0" />
+            <element signature="method#submit#0;class#ArticleServlet#0" />
+            <element signature="method#delete#0;class#ArticleServlet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="171" column="21" lean-forward="true" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="e#1731#1732#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/blog.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="320">
+          <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

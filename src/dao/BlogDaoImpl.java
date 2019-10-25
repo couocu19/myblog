@@ -2,7 +2,6 @@ package dao;
 
 import bean.Article;
 import bean.User;
-import org.apache.commons.fileupload.FileItem;
 import util.JDBCUtil;
 
 import java.io.*;
@@ -126,16 +125,60 @@ public class BlogDaoImpl implements BlogDao {
 
     @Override
     public void addArticle(Article a) {
+        Connection con = JDBCUtil.getConnection();
+        String sql = "insert into articles (user,writing,commentcount,time,viewcount,title,hwriting) values(?,?,?,?,?,?,?)";
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1,a.getUser());
+            ps.setString(2,a.getWriting());
+            ps.setInt(3,a.getCommentCount());
+            //Date类型的相互转化
+            java.sql.Date sqlDate=new java.sql.Date(a.getDate().getTime());
+            ps.setDate(4,sqlDate);
+            ps.setInt(5,a.getViewCount());
+            ps.setString(6,a.getTitle());
+            ps.setString(7,a.getHwriting());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public void deleteArticle(int id) {
+        Connection con = JDBCUtil.getConnection();
+        String sql = "delete from articles where id = ?";
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
-    public void updateArticle(int id) {
+    public void updateArticle(int id,String title,String writing,String hwriting) {
+        Connection con = JDBCUtil.getConnection();
+        String sql = "update articles set title = ?,writing = ?,hwriting = ? where id = ?";
+        //String sql1 = "update articles set title = ?,hwriting = ? where id = ?";
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1,title);
+            ps.setString(2,writing);
+            ps.setString(3,hwriting);
+            ps.setInt(4,id);
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -160,12 +203,7 @@ public class BlogDaoImpl implements BlogDao {
             if(rs!=null){
                 articles = new ArrayList<>();
                 while(rs.next()){
-                    String user = rs.getString("user");
-                    int commentcount = rs.getInt("commentcount");
-                    Date date = rs.getDate("time");
-                    int viewcount = rs.getInt("viewcount");
-                    String title = rs.getString("title");
-//                    a = new Article(user,title,viewcount,commentcount,date);
+                    a = pGetArticle(rs);
                     articles.add(a);
                 }
 
@@ -177,4 +215,57 @@ public class BlogDaoImpl implements BlogDao {
         return articles;
 
     }
+
+    //通过数据库的结果获取某个Article的所有信息
+    private Article pGetArticle(ResultSet rs){
+        Article a = null;
+        try {
+            int id = rs.getInt("id");
+            String user = rs.getString("user");
+            String writing = rs.getString("writing");
+            String title = rs.getString("title");
+            String hwriting = rs.getString("hwriting");
+            int commentCount = rs.getInt("commentCount");
+            int viewCount = rs.getInt("viewCount");
+            java.sql.Date date = rs.getDate("time");
+            java.util.Date Udate = new java.util.Date(date.getTime());
+            a = new Article(id,user,viewCount,Udate,writing,hwriting,commentCount,title);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return a;
+    }
+
+    public Article getArticle(int id){
+        Connection con = JDBCUtil.getConnection();
+        String sql = "select * from articles where id = ?";
+        ResultSet rs = null;
+        PreparedStatement ps = null;
+        Article a = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,id);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                String user = rs.getString("user");
+                String writing = rs.getString("writing");
+                String hwriting = rs.getString("hwriting");
+                int viewCount = rs.getInt("viewcount");
+                int commentCount = rs.getInt("commentCount");
+                Date date = rs.getDate("date");
+                String title = rs.getString("title");
+                a = new Article(id,user,viewCount,date,writing,hwriting,commentCount,title);
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return a;
+
+
+    }
 }
+
+
