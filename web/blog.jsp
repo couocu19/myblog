@@ -62,9 +62,30 @@
             <%--<div class="news-list-item clearfix">--%>
                <c:forEach items="${list}" var="l">
                    <div class="news-list-item clearfix">
-                    <a class="text" href="#" class="title">${l.title}</a>
-                       <h4>${l.hwriting}</h4>
+                       <div id="title" style="width: 500px;
+            height: 30px;
+            text-align: center;
+            font-family: 楷体;
+            font-weight: bold;">
+                    <a class="text" href="" class="title">${l.title}</a>
+                       </div><br>
+                       <%--${l.hwriting}--%>
+                       <div id="read" style="text-align: center;
+
+width: 100px;
+
+height: 30px;
+
+margin: 30px auto;
+
+border: 1px solid darkkhaki;
+
+padding: 4px;
+
+border-radius: 5px;">
+
                     <a class="text1" href="#" class="title">阅读全文</a>
+                       </div>
                     <div class="info">
                         <span>作者:${l.user}</span>.
                         <span>评论数:${l.commentCount}</span>

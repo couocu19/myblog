@@ -134,13 +134,30 @@ a.navbar-nav li:hover{
 }
 .text{
     color: black !important;
-    font-size: 20px;
+    font-size: 28px;
     padding: 150px;
 }
 .text1{
     color: #5e5e5e !important;
     font-size: 13px;
-    padding: 215px;
+    padding: 10px;
+}
+#read{
+    text-align: center;
+    width: 40px;
+    height: 20px;
+}
+#read:hover{
+    transform: scale(1.25);
+    background-color: #adadad;
+    color: #761c19;
+}
+#title{
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    font-family: 楷体;
+    font-weight: bold;
 }
 
 
