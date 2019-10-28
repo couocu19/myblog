@@ -142,17 +142,17 @@ a.navbar-nav li:hover{
     font-size: 13px;
     padding: 10px;
 }
-#read{
+.read{
     text-align: center;
     width: 40px;
     height: 20px;
 }
-#read:hover{
+.read:hover{
     transform: scale(1.25);
-    background-color: #adadad;
-    color: #761c19;
+    background-color: gainsboro;
+    color: black !important;
 }
-#title{
+.title{
     width: 500px;
     height: 30px;
     text-align: center;

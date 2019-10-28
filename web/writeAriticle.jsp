@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link rel="stylesheet" href="css/writeArticle.css" />
+<%--<link rel="stylesheet" href="css/showArticle.css" />--%>
 <!-- 通过mvc:resources设置静态资源，这样servlet就会处理这些静态资源，而不通过控制器 -->
 <!-- 设置不过滤内容，比如:css,jquery,img 等资源文件 -->
 <mvc:resources mapping="/css/**" location="/statics/css/" />

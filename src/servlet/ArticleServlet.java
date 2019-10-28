@@ -64,8 +64,6 @@ public class ArticleServlet extends HttpServlet {
         return null;
     }
 
-
-
     /**
      * 提交文章方法
      * @param request
@@ -92,6 +90,15 @@ public class ArticleServlet extends HttpServlet {
     }
 
 
+    public void show(HttpServletRequest request,HttpServletResponse response)throws Exception{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;utf-8");
+        int id = Integer.valueOf(request.getParameter("id"));
+        Article a = bd.getArticle(id);
+        request.getServletContext().setAttribute("article",a);
+        //request.getRequestDispatcher("Article.jsp").forward(request,response);
+        response.sendRedirect(request.getContextPath()+"/Article.jsp");
+    }
 
     public void delete(HttpServletRequest request,HttpServletResponse response) throws Exception{
         request.setCharacterEncoding("utf-8");
@@ -104,6 +111,29 @@ public class ArticleServlet extends HttpServlet {
 
     }
 
+    public void update1(HttpServletRequest request,HttpServletResponse response) throws Exception{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;utf-8");
+        int id = Integer.valueOf(request.getParameter("id"));
+        Article a = bd.getArticle(id);
+        request.setAttribute("article",a);
+        request.getRequestDispatcher("/updateArticle.jsp").forward(request,response);
+
+
+    }
+
+    public void update2(HttpServletRequest request,HttpServletResponse response) throws Exception{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;utf-8");
+        int id = Integer.valueOf(request.getParameter("id"));
+        Article a = bd.getArticle(id);
+        String title = request.getParameter("title");
+        String writing = request.getParameter("writing");
+        String hwriting = request.getParameter("hwriting");
+        bd.updateArticle(id,title,writing,hwriting);
+        request.setAttribute("id",id);
+        response.sendRedirect(request.getContextPath()+"/article/show");
+    }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req,resp);

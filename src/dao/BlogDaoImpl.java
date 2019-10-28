@@ -253,7 +253,7 @@ public class BlogDaoImpl implements BlogDao {
                 String hwriting = rs.getString("hwriting");
                 int viewCount = rs.getInt("viewcount");
                 int commentCount = rs.getInt("commentCount");
-                Date date = rs.getDate("date");
+                Date date = rs.getDate("time");
                 String title = rs.getString("title");
                 a = new Article(id,user,viewCount,date,writing,hwriting,commentCount,title);
 
