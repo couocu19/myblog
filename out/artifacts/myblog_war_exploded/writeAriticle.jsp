@@ -43,7 +43,7 @@
      <header>
         <h1>请开始你的编辑</h1>
             文章标题：<input type="text" id="articleTitle" name="title" />
-         <input type="hidden" name="user" value="<%=name%>">
+           <input type="hidden" name="user" value="<%=name%>">
             类别：
             <select id="articleCategory"></select>
             <span id="btnList">

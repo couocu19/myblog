@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -53,7 +55,6 @@ public class ArticleServlet extends HttpServlet {
         response.setContentType("text/html;utf-8");
         List<Article> list = bd.listArticles();
         request.getServletContext().setAttribute("list",list);
-
         request.getRequestDispatcher("/blog.jsp").forward(request,response);
 
     }
@@ -75,7 +76,10 @@ public class ArticleServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         //设置响应编码格式
         response.setContentType("text/html;charset=utf-8");
+        String path = (String)request.getServletContext().getAttribute("path");
         String name = request.getParameter("user");
+        System.out.println(name);
+        request.getServletContext().setAttribute("user",name);
         String title = request.getParameter("title");
         Date date = new Date();
         int view = 0;
@@ -84,16 +88,22 @@ public class ArticleServlet extends HttpServlet {
         String hwriting = request.getParameter("essay");
         Article a = new Article(name,view,date,title,writing,hwriting,comment);
         bd.addArticle(a);
-        response.sendRedirect(request.getContextPath()+"/blog.jsp");
 
-        //request.getRequestDispatcher("/blog.jsp").forward(request,response);
+        request.getRequestDispatcher("/blog").forward(request,response);
     }
-
 
     public void show(HttpServletRequest request,HttpServletResponse response)throws Exception{
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;utf-8");
-        int id = Integer.valueOf(request.getParameter("id"));
+        int id;
+        if(request.getParameter("id") == null){
+            id =(int)request.getServletContext().getAttribute("id");
+            System.out.println(id);
+        }else{
+            id = Integer.valueOf(request.getParameter("id"));
+            System.out.println(id);
+        }
+
         Article a = bd.getArticle(id);
         request.getServletContext().setAttribute("article",a);
         //request.getRequestDispatcher("Article.jsp").forward(request,response);
@@ -103,11 +113,15 @@ public class ArticleServlet extends HttpServlet {
     public void delete(HttpServletRequest request,HttpServletResponse response) throws Exception{
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;utf-8");
-        String name = request.getParameter("user");
-
-
-
-
+        int id = Integer.valueOf(request.getParameter("id"));
+        Article a = bd.getArticle(id);
+        String name = a.getUser();
+        System.out.println(name);
+        System.out.println(id);
+        bd.deleteArticle(id);
+        request.getServletContext().setAttribute("user",name);
+        //request.getRequestDispatcher("/blog").forward(request,response);
+         response.sendRedirect(request.getContextPath()+"/blog");
 
     }
 
@@ -131,9 +145,22 @@ public class ArticleServlet extends HttpServlet {
         String writing = request.getParameter("writing");
         String hwriting = request.getParameter("hwriting");
         bd.updateArticle(id,title,writing,hwriting);
-        request.setAttribute("id",id);
+        request.getServletContext().setAttribute("id",id);
         response.sendRedirect(request.getContextPath()+"/article/show");
     }
+
+    public void search(HttpServletRequest request,HttpServletResponse response) throws Exception{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;utf-8");
+        String info = request.getParameter("info");
+        System.out.println(info);
+        List<Article> list = bd.searchArticle(info);
+        request.getServletContext().setAttribute("infoList",list);
+        response.sendRedirect(request.getContextPath()+"/searchArticle.jsp");
+        //request.getRequestDispatcher("/searchArticle.jsp").forward(request,response);
+
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req,resp);

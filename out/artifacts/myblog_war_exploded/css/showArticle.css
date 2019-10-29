@@ -42,6 +42,35 @@
     color: #0D3349;
     margin: 0px 20px 0px 3px;
 }
+.number{
+    float: left;
+    margin: 10px 10px 0px 20px;
+    border-right: 1.3px solid darkgray;
+    padding-right: 12px;
+    padding-top: 3px;
+    color: darkolivegreen;
+}
+.number:hover{
+    background-color: #bbbbbb;
+
+}
+.view:hover{
+    background-color: #bbbbbb;
+}
+.view{
+    float: left;
+    margin: 10px 8px 0px 4px;
+    border-right: 1.3px solid darkgray;
+    padding-right: 12px;
+    padding-top: 3px;
+    color: cadetblue;
+}
+.num1{
+    text-align: center;
+}
+.num{
+    text-align: center;
+}
 .writer{
     float: left;
     margin: 0px 20px 0px 3px;
@@ -52,8 +81,15 @@
     padding-right: 25px;
 }
 
-.view{
+.view1{
     float: left;
     font-size: 16px;
     color: cadetblue;
 }
+.basicInfo{
+    width: 210px;
+    height: 60px;
+    margin-left: 60px;
+    border: 1px solid gainsboro;
+}
+

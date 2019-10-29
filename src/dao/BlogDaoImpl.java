@@ -184,7 +184,30 @@ public class BlogDaoImpl implements BlogDao {
 
     @Override
     public List<Article> searchArticle(String info) {
-        return null;
+        List<Article> list = null ;
+        Connection con = JDBCUtil.getConnection();
+        //模糊查询
+        String sql = "SELECT * FROM articles WHERE title or writing LIKE ?";
+        //String sql = "select * from articles where match (title,writing) against (?);";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1,"%"+info+"%");
+            rs = ps.executeQuery();
+            if(rs!=null){
+                list = new ArrayList<>();
+                while(rs.next()){
+                    Article a = pGetArticle(rs);
+                    list.add(a);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return list;
     }
 
     //展示所有博文

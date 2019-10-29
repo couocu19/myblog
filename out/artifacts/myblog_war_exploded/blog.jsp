@@ -20,6 +20,7 @@
 <div class="container">
     <%
         String name = (String)request.getServletContext().getAttribute("name");
+        request.getServletContext().setAttribute("user",name);
     %>
     <div class="col-sm-3">
            <div id="userBox">
@@ -57,7 +58,9 @@
            </div>
 
 </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6" style="background:
+    rgba(250,250,255,0.8);
+    border-radius: 10px;">
         <div class="news-list">
             <%--<div class="news-list-item clearfix">--%>
                <c:forEach items="${list}" var="l">
@@ -74,7 +77,7 @@
                        <div class="read" style="text-align: center;
 width: 100px;
 height: 30px;
-margin: 30px auto 0px auto;
+margin: 26px auto 0px auto;
 border: 1px solid darkkhaki;
 padding: 4px;
 border-radius: 5px;">
@@ -108,8 +111,8 @@ border-radius: 5px;">
                </ul>
 
            <div class="search-bar">
-               <form action="" method="post">
-               <input type="search" class="form-control" placeholder="搜索关键词……">
+               <form action="article/search" method="post">
+               <input type="search" class="form-control" name="info" placeholder="搜索关键词……">
                </form>
            </div>
        </div>
