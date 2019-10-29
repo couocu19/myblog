@@ -27,7 +27,7 @@ public class BlogDaoImpl implements BlogDao {
             ps.setString(1,user);
             ps.setString(2,pwd);
             rs = ps.executeQuery();
-            if(rs!=null){
+            if(rs.next()){
                 flag = true;
             }else{
                 flag = false;

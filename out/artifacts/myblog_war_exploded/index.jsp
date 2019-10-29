@@ -13,8 +13,21 @@
     <title>LoginPage</title>
   </head>
   <body>
-  <div class="lr">
+  <%
+     String msg = (String)request.getAttribute("msg");
 
+  %>
+  <div class="lr">
+    <div class="msg">
+      <%
+        if(msg!=null){
+      %>
+      <%=msg%>
+      <%
+        }
+      %>
+
+    </div>
   <form action="login" method="post">
     <div class="form-group">
     用户名/昵称<br>

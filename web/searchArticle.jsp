@@ -16,51 +16,31 @@
     <link rel="stylesheet" type="text/css" href="css/showArticle.css"/>
 </head>
 <body>
-<%--<%--%>
-    <%--List<Article> list = (List)request.getAttribute("infoList");--%>
-    <%----%>
-    <%----%>
-<%--%>--%>
-<div class="container">
+<div class="contains">
+</div>
+<div class="contain">
     <div class="total">
-        <h1>为你找到以下文章</h1>
+        <p class="stitle">为你找到以下文章</p>
     </div>
-    <div class="news-list">
-        <%--<div class="news-list-item clearfix">--%>
+    <div class="list">
         <c:forEach items="${infoList}" var="l">
-            <div class="news-list-item clearfix">
-                <div class="title" style="width: 500px;
-            height: 30px;
-            text-align: center;
-            font-family: 楷体;
-            font-weight: bold;">
+            <div class="item">
+                <div class="stitles">
                     <a class="text" href="article/show?id=${l.id}" class="title">${l.title}</a>
-                </div><br>
-                <div class="read" style="text-align: center;
-width: 100px;
-height: 30px;
-margin: 26px auto 0px auto;
-border: 1px solid darkkhaki;
-padding: 4px;
-border-radius: 5px;">
-                    <style>
-                        .read:hover{
-                            transform: scale(1.25);
-                            background-color: gainsboro;
-                            color: black !important;
-                        }
-                    </style>
-                    <a class="text1" href="article/show?id=${l.id}" class="title">阅读全文</a>
                 </div>
-                <div class="info">
-                    <span>作者:${l.user}</span>.
-                    <span>评论数:${l.commentCount}</span>
+                <div class="information" >
+                    <div class="wc">
+                        <span>发表于:${l.date}</span>.
+                        <span>作者:${l.user}</span>.
+                        <span>评论数:${l.commentCount}</span>
+                    </div>
+                    <div class="look">
+                        <a class="text11" href="article/show?id=${l.id}" class="title">查看全文</a>
+                    </div>
+
                 </div>
             </div>
         </c:forEach>
-
-        <%--</div>--%>
-
     </div>
 
 

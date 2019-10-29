@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -24,15 +25,28 @@ public class LoginServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;utf-8");
         String user = req.getParameter("user");
+        System.out.println(user);
         String pwd = req.getParameter("pwd");
-        req.getServletContext().setAttribute("user",user);
-        req.getServletContext().setAttribute("pwd",pwd);
-        if(bs.userMappingService(user,pwd)){
-            List<Article> list = bd.listArticles();
-            req.getServletContext().setAttribute("list",list);
-          req.getRequestDispatcher("/blog").forward(req,resp);
+        System.out.println(pwd);
+        if(user!=""&& pwd!="") {
+            if (bd.userMapping(user, pwd)) {
+                System.out.println("ok");
+                req.getServletContext().setAttribute("user",user);
+                HttpSession session = req.getSession();
+                session.setAttribute("user",user);
+                List<Article> list = bd.listArticles();
+                req.getServletContext().setAttribute("list", list);
+                req.getRequestDispatcher("/blog").forward(req, resp);
+            } else {
+                String msg = "用户名或者密码错误！";
+                req.setAttribute("msg",msg);
+                req.getRequestDispatcher("/index.jsp").forward(req,resp);
+            }
         }else{
-            resp.sendRedirect("index.jsp");
+            String msg = "请将登录信息填写完整！";
+            req.setAttribute("msg",msg);
+            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+
         }
 
     }
