@@ -15,7 +15,7 @@ public interface BlogService {
     void addArticleService(Article a);
 
     void deleteArticleService(int id);
-    void updateArticleService(int id);
+    void updateArticleService(int id,String title,String writing,String hwriting);
 
     //查找博文
     List<Article> searchArticleService(String info);
@@ -23,4 +23,7 @@ public interface BlogService {
     //列举所有博文
     List<Article> listArticlesService();
 
+   void updateViewService(int view,int id);
+
+    Article getArticleService(int id);
 }

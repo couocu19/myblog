@@ -20,31 +20,40 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void addUserService(User u) {
         bd.addUser(u);
-
     }
 
     @Override
     public void addArticleService(Article a) {
-
+        bd.addArticle(a);
     }
 
     @Override
     public void deleteArticleService(int id) {
-
+        bd.deleteArticle(id);
     }
 
     @Override
-    public void updateArticleService(int id) {
+    public void updateArticleService(int id,String title,String writing,String hwriting) {
+        bd.updateArticle(id,title,writing,hwriting);
 
     }
 
     @Override
     public List<Article> searchArticleService(String info) {
-        return null;
+        return  bd.searchArticle(info);
     }
 
     @Override
     public List<Article> listArticlesService() {
-        return null;
+        return bd.listArticles();
+    }
+
+    public Article getArticleService(int id){
+        return bd.getArticle(id);
+    }
+
+    @Override
+    public void updateViewService(int view, int id) {
+        bd.updateView(view,id);
     }
 }

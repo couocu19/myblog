@@ -2,7 +2,10 @@ package servlet;
 
 import bean.Article;
 import dao.BlogDaoImpl;
+import service.BlogService;
+import service.BlogServiceImpl;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +23,8 @@ import java.util.UUID;
 @WebServlet(name = "article",urlPatterns = "/article/*")
 public class ArticleServlet extends HttpServlet {
 
-    BlogDaoImpl bd = new BlogDaoImpl();
+    BlogService bd = new BlogServiceImpl();
+    //BlogDaoImpl bd = new BlogDaoImpl();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String urlPattern = req.getRequestURI();
@@ -53,7 +57,7 @@ public class ArticleServlet extends HttpServlet {
     public void showArticles(HttpServletRequest request,HttpServletResponse response) throws Exception{
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;utf-8");
-        List<Article> list = bd.listArticles();
+        List<Article> list = bd.listArticlesService();
         request.getServletContext().setAttribute("list",list);
         request.getRequestDispatcher("/blog.jsp").forward(request,response);
 
@@ -87,7 +91,7 @@ public class ArticleServlet extends HttpServlet {
         String writing = request.getParameter("markdown");
         String hwriting = request.getParameter("essay");
         Article a = new Article(name,view,date,title,writing,hwriting,comment);
-        bd.addArticle(a);
+        bd.addArticleService(a);
 
         request.getRequestDispatcher("/blog").forward(request,response);
     }
@@ -103,10 +107,14 @@ public class ArticleServlet extends HttpServlet {
             id = Integer.valueOf(request.getParameter("id"));
             System.out.println(id);
         }
-
-        Article a = bd.getArticle(id);
+        Article a = bd.getArticleService(id);
+        //更新文章的访问量,每有一次该请求更新一次。
+        int view = a.getViewCount();
+        view = view+1;
+        System.out.println(view);
+        bd.updateViewService(view,id);
+        a.setViewCount(view);
         request.getServletContext().setAttribute("article",a);
-        //request.getRequestDispatcher("Article.jsp").forward(request,response);
         response.sendRedirect(request.getContextPath()+"/Article.jsp");
     }
 
@@ -114,11 +122,11 @@ public class ArticleServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;utf-8");
         int id = Integer.valueOf(request.getParameter("id"));
-        Article a = bd.getArticle(id);
+        Article a = bd.getArticleService(id);
         String name = a.getUser();
         System.out.println(name);
         System.out.println(id);
-        bd.deleteArticle(id);
+        bd.deleteArticleService(id);
         request.getServletContext().setAttribute("user",name);
         //request.getRequestDispatcher("/blog").forward(request,response);
          response.sendRedirect(request.getContextPath()+"/blog");
@@ -129,7 +137,7 @@ public class ArticleServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;utf-8");
         int id = Integer.valueOf(request.getParameter("id"));
-        Article a = bd.getArticle(id);
+        Article a = bd.getArticleService(id);
         request.setAttribute("article",a);
         request.getRequestDispatcher("/updateArticle.jsp").forward(request,response);
 
@@ -140,11 +148,11 @@ public class ArticleServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;utf-8");
         int id = Integer.valueOf(request.getParameter("id"));
-        Article a = bd.getArticle(id);
+        Article a = bd.getArticleService(id);
         String title = request.getParameter("title");
         String writing = request.getParameter("writing");
         String hwriting = request.getParameter("hwriting");
-        bd.updateArticle(id,title,writing,hwriting);
+        bd.updateArticleService(id,title,writing,hwriting);
         request.getServletContext().setAttribute("id",id);
         response.sendRedirect(request.getContextPath()+"/article/show");
     }
@@ -154,7 +162,7 @@ public class ArticleServlet extends HttpServlet {
         response.setContentType("text/html;utf-8");
         String info = request.getParameter("info");
         System.out.println(info);
-        List<Article> list = bd.searchArticle(info);
+        List<Article> list = bd.searchArticleService(info);
         request.getServletContext().setAttribute("infoList",list);
         response.sendRedirect(request.getContextPath()+"/searchArticle.jsp");
         //request.getRequestDispatcher("/searchArticle.jsp").forward(request,response);

@@ -13,8 +13,10 @@ import java.io.PrintWriter;
  */
 @WebFilter(filterName = "loginFilter", urlPatterns = { "/*" })
 public class LoginFilter implements Filter {
+    private FilterConfig filterConfig;
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
+        this.filterConfig=filterConfig;
 
     }
 
@@ -30,7 +32,8 @@ public class LoginFilter implements Filter {
         String request_uri = req.getRequestURI();
         String ctxPath = req.getContextPath();
         String uri = request_uri.substring(ctxPath.length());
-        if (uri.contains("index.jsp") || uri.contains("login")) {
+        System.out.println(uri);
+        if (uri.contains("index.jsp") || uri.contains("login")||uri.equals("/")||uri.equals("/signup.jsp")|| uri.equals("/register")|| uri.equals("/upload")) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             if (session.getAttribute("user") != null) {

@@ -71,7 +71,6 @@ public class BlogDaoImpl implements BlogDao {
 
 
     }
-    //从数据库获取用户头像....好像不需要这个函数
     public String getImagePath(String name){
         Connection con = JDBCUtil.getConnection();
         String sql = "select * from imagepath where name = ?";
@@ -95,7 +94,6 @@ public class BlogDaoImpl implements BlogDao {
         return path;
 
     }
-
 
     public String getUserBirth(String name){
         Connection con = JDBCUtil.getConnection();
@@ -209,7 +207,6 @@ public class BlogDaoImpl implements BlogDao {
 
         return list;
     }
-
     //展示所有博文
     @Override
     public List<Article> listArticles()
@@ -238,7 +235,6 @@ public class BlogDaoImpl implements BlogDao {
         return articles;
 
     }
-
     //通过数据库的结果获取某个Article的所有信息
     private Article pGetArticle(ResultSet rs){
         Article a = null;
@@ -259,7 +255,6 @@ public class BlogDaoImpl implements BlogDao {
         }
         return a;
     }
-
     public Article getArticle(int id){
         Connection con = JDBCUtil.getConnection();
         String sql = "select * from articles where id = ?";
@@ -287,6 +282,22 @@ public class BlogDaoImpl implements BlogDao {
 
         return a;
 
+
+    }
+
+    //更新文章的阅读数量
+    public void updateView(int view,int id){
+        Connection con = JDBCUtil.getConnection();
+        String sql = "update articles set viewcount = ? where id = ? ";
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,view);
+            ps.setInt(2,id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }
